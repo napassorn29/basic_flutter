@@ -9,6 +9,8 @@ void main() {
 // เปลี่ยนแปลงค่าไม่ได้ = stateless
 // เปลี่ยนแปลงค่าได้ = stateful
 
+// center widget ครอบแล้วจะอยู่ตรงกลางหน้าจอ
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -20,7 +22,9 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Hello flutter"),
         ),
-        body: Text("helloooooo"),
+        body: Center(
+          child: Text("helloooooooo"),
+        ),
       ),
       theme: ThemeData(
         primarySwatch: Colors.green,

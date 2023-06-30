@@ -5,7 +5,13 @@ void main() {
   //ชื่อ propoty ตามด้วย :
   var app = MaterialApp(
     title: "My App",
-    home: Text("hello dart"),
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text("Hello flutter"),
+      ),
+      body: Text("helloooooo"),
+    ),
+    // scaffold = หน้าต่างสำเร็จรูป
   );
   runApp(app);
 }

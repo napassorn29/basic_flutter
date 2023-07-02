@@ -23,9 +23,12 @@ class MyApp extends StatelessWidget {
           title: Text("Hello flutter"),
         ),
         body: Center(
-          child: Image(
-              image: NetworkImage(
-                  "https://cdn.pixabay.com/photo/2023/05/30/17/20/woman-8029209_640.jpg")),
+          // child รับได้แค่ widget ตัวเดียว
+          child: Column(children: [
+            Text("hello"),
+            Text("everyone"),
+            Text("happy happy happy")
+          ]),
         ),
       ),
       theme: ThemeData(

@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Text("add"),
+        child: Icon(Icons.add),
       ),
     );
   }

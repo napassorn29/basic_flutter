@@ -56,11 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
-            onPressed: () {
-              setState(() {
-                number++;
-              });
-            },
+            onPressed: addNumber,
             child: Icon(Icons.add),
           ),
           SizedBox(
@@ -68,15 +64,23 @@ class _MyHomePageState extends State<MyHomePage> {
             width: 16,
           ), // Add some spacing between the buttons
           FloatingActionButton(
-            onPressed: () {
-              setState(() {
-                number--;
-              });
-            },
+            onPressed: minusNumber,
             child: Icon(Icons.exposure_minus_1),
           ),
         ],
       ),
     );
+  }
+
+  void addNumber() {
+    setState(() {
+      number++;
+    });
+  }
+
+  void minusNumber() {
+    setState(() {
+      number--;
+    });
   }
 }

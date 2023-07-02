@@ -38,16 +38,17 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    // กลุ่มข้อมูล text widget เก็บไว้ในตัวแปรชื่อ data
     List<Widget> data = [];
-    data.add(Text("กดปุ่มเพื่อเพิ่มจำนวนตัวเลข"));
+    for (var i = 0; i < 10; i++) {
+      data.add(Text("รายการที่ ${i + 1}"));
+    }
     data.add(
       Text(
         "$number",
         style: TextStyle(fontSize: 60),
       ),
     );
-    data.add(Text("ลองกดดูนะะ"));
-    data.add(Text("ขอบคุณค่ะะะ"));
 
     return Scaffold(
       appBar: AppBar(

@@ -23,7 +23,11 @@ class MyApp extends StatelessWidget {
           title: Text("Hello flutter"),
         ),
         body: Center(
-          child: Text("helloooooooo"),
+          child: Text(
+            "helloooooooo",
+            style: TextStyle(
+                fontSize: 30, color: Color.fromARGB(98, 114, 10, 104)),
+          ),
         ),
       ),
       theme: ThemeData(

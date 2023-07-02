@@ -38,19 +38,26 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> data = [];
+    data.add(Text("กดปุ่มเพื่อเพิ่มจำนวนตัวเลข"));
+    data.add(
+      Text(
+        "$number",
+        style: TextStyle(fontSize: 60),
+      ),
+    );
+    data.add(Text("ลองกดดูนะะ"));
+    data.add(Text("ขอบคุณค่ะะะ"));
+
     return Scaffold(
       appBar: AppBar(
         title: Text("program!!!"),
       ),
       body: Center(
-        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text("กดปุ่มเพื่อเพิ่มจำนวนตัวเลข"),
-          //number.tostring(),
-          Text(
-            "$number",
-            style: TextStyle(fontSize: 60),
-          ),
-        ]),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: data,
+        ),
       ),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,

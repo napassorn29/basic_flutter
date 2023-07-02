@@ -52,14 +52,27 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ]),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            number++;
-          });
-          ;
-        },
-        child: Icon(Icons.add),
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: () {
+              setState(() {
+                number++;
+              });
+            },
+            child: Icon(Icons.add),
+          ),
+          SizedBox(height: 16), // Add some spacing between the buttons
+          FloatingActionButton(
+            onPressed: () {
+              setState(() {
+                number--;
+              });
+            },
+            child: Icon(Icons.exposure_minus_1),
+          ),
+        ],
       ),
     );
   }

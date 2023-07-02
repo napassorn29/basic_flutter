@@ -23,11 +23,9 @@ class MyApp extends StatelessWidget {
           title: Text("Hello flutter"),
         ),
         body: Center(
-          child: Text(
-            "helloooooooo",
-            style: TextStyle(
-                fontSize: 30, color: Color.fromARGB(98, 114, 10, 104)),
-          ),
+          child: Image(
+              image: NetworkImage(
+                  "https://cdn.pixabay.com/photo/2023/05/30/17/20/woman-8029209_640.jpg")),
         ),
       ),
       theme: ThemeData(

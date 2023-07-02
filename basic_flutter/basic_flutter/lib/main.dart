@@ -24,11 +24,13 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           // child รับได้แค่ widget ตัวเดียว
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Text("hello"),
-            Text("everyone"),
-            Text("happy happy happy")
-          ]),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text("hello"),
+                Text("everyone"),
+                Text("happy happy happy")
+              ]),
         ),
       ),
       theme: ThemeData(

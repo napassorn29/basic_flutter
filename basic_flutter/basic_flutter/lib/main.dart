@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ]),
       ),
-      floatingActionButton: Column(
+      floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
@@ -63,7 +63,10 @@ class _MyHomePageState extends State<MyHomePage> {
             },
             child: Icon(Icons.add),
           ),
-          SizedBox(height: 16), // Add some spacing between the buttons
+          SizedBox(
+            height: 16,
+            width: 16,
+          ), // Add some spacing between the buttons
           FloatingActionButton(
             onPressed: () {
               setState(() {

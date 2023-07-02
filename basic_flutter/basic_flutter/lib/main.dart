@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           // child รับได้แค่ widget ตัวเดียว
-          child: Column(children: [
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             Text("hello"),
             Text("everyone"),
             Text("happy happy happy")

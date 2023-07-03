@@ -42,28 +42,35 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("รายรับ รายจ่าย"),
         ),
-        body: Column(
-          children: [
-            //กล่องที่ใช้จองพื้นที่ ใส่รูปใส่สีได้
-            Container(
-              decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 212, 251, 167),
-                  borderRadius: BorderRadius.circular(10)),
-              height: 100,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 142, 179, 100),
-                  borderRadius: BorderRadius.circular(10)),
-              height: 100,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 106, 144, 64),
-                  borderRadius: BorderRadius.circular(10)),
-              height: 100,
-            )
-          ],
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              //กล่องที่ใช้จองพื้นที่ ใส่รูปใส่สีได้
+              Container(
+                padding: const EdgeInsets.all(20.0),
+                decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 212, 251, 167),
+                    borderRadius: BorderRadius.circular(10)),
+                height: 100,
+                child: Row(
+                  children: [Text("คงเหลือ"), Text("15000")],
+                ),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 142, 179, 100),
+                    borderRadius: BorderRadius.circular(10)),
+                height: 100,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 106, 144, 64),
+                    borderRadius: BorderRadius.circular(10)),
+                height: 100,
+              )
+            ],
+          ),
         ));
   }
 }

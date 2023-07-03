@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: ListView(
-          children: getData(30),
+          children: getData(number),
         ),
       ),
       floatingActionButton: Row(

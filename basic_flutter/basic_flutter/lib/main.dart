@@ -55,8 +55,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 decoration: BoxDecoration(
                     color: Color.fromARGB(255, 99, 245, 255),
                     borderRadius: BorderRadius.circular(10)),
-                height: 120,
+                height: 100,
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
                       "คงเหลือ",
@@ -65,23 +66,30 @@ class _MyHomePageState extends State<MyHomePage> {
                           color: Colors.black,
                           fontWeight: FontWeight.bold),
                     ),
-                    Text(
-                      "15000",
-                      style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
+                    Expanded(
+                      child: Text(
+                        "15000",
+                        style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.right,
+                      ),
                     )
                   ],
                 ),
+              ),
+              SizedBox(
+                height: 5,
               ),
               Container(
                 padding: const EdgeInsets.all(20.0),
                 decoration: BoxDecoration(
                     color: Color.fromARGB(255, 109, 255, 99),
                     borderRadius: BorderRadius.circular(10)),
-                height: 120,
+                height: 100,
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
                       "รายรับ",
@@ -90,12 +98,43 @@ class _MyHomePageState extends State<MyHomePage> {
                           color: Colors.black,
                           fontWeight: FontWeight.bold),
                     ),
+                    Expanded(
+                      child: Text("25000",
+                          style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.right),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Container(
+                padding: const EdgeInsets.all(20.0),
+                decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 255, 156, 51),
+                    borderRadius: BorderRadius.circular(10)),
+                height: 100,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
                     Text(
-                      "25000",
+                      "เงินค้างชำระ",
                       style: TextStyle(
                           fontSize: 25,
                           color: Colors.black,
                           fontWeight: FontWeight.bold),
+                    ),
+                    Expanded(
+                      child: Text("1200",
+                          style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.right),
                     )
                   ],
                 ),

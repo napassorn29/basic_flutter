@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: "My App",
       home: MyHomePage(),
       theme: ThemeData(
-        primarySwatch: Colors.lightBlue,
+        primarySwatch: Colors.purple,
       ),
     );
   }
@@ -40,7 +40,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("รายรับ รายจ่าย"),
+          title: Text(
+            "รายรับ รายจ่าย",
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          ),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -50,30 +53,52 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 padding: const EdgeInsets.all(20.0),
                 decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 212, 251, 167),
+                    color: Color.fromARGB(255, 99, 245, 255),
                     borderRadius: BorderRadius.circular(10)),
-                height: 100,
+                height: 120,
                 child: Row(
-                  children: [Text("คงเหลือ"), Text("15000")],
+                  children: [
+                    Text(
+                      "คงเหลือ",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "15000",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-              ),
               Container(
+                padding: const EdgeInsets.all(20.0),
                 decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 142, 179, 100),
+                    color: Color.fromARGB(255, 109, 255, 99),
                     borderRadius: BorderRadius.circular(10)),
-                height: 100,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 106, 144, 64),
-                    borderRadius: BorderRadius.circular(10)),
-                height: 100,
+                height: 120,
+                child: Row(
+                  children: [
+                    Text(
+                      "รายรับ",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "25000",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
               )
             ],
           ),

@@ -36,27 +36,16 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int number = 0; // build state
 
+  // แสดงผลข้อมูล
   @override
   Widget build(BuildContext context) {
-    // กลุ่มข้อมูล text widget เก็บไว้ในตัวแปรชื่อ data
-    List<Widget> data = [];
-    for (var i = 0; i < 10; i++) {
-      data.add(Text("รายการที่ ${i + 1}"));
-    }
-    data.add(
-      Text(
-        "$number",
-        style: TextStyle(fontSize: 60),
-      ),
-    );
-
     return Scaffold(
       appBar: AppBar(
         title: Text("program!!!"),
       ),
       body: Center(
         child: ListView(
-          children: data,
+          children: getData(15),
         ),
       ),
       floatingActionButton: Row(
@@ -89,5 +78,21 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       number--;
     });
+  }
+
+// เตรียมข้อมูล
+  List<Widget> getData(int count) {
+// กลุ่มข้อมูล text widget เก็บไว้ในตัวแปรชื่อ data
+    List<Widget> data = [];
+    for (var i = 0; i < count; i++) {
+      data.add(Text("รายการที่ ${i + 1}"));
+    }
+    data.add(
+      Text(
+        "$number",
+        style: TextStyle(fontSize: 60),
+      ),
+    );
+    return data;
   }
 }

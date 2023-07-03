@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'foodMenu.dart';
+import 'MoneyBox.dart';
 //import 'package:flutter/src/material/colors.dart';
 
 void main() {
@@ -42,103 +42,27 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text(
             "รายรับ รายจ่าย",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              //กล่องที่ใช้จองพื้นที่ ใส่รูปใส่สีได้
-              Container(
-                padding: const EdgeInsets.all(20.0),
-                decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 99, 245, 255),
-                    borderRadius: BorderRadius.circular(10)),
-                height: 100,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      "คงเหลือ",
-                      style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Expanded(
-                      child: Text(
-                        "15000",
-                        style: TextStyle(
-                            fontSize: 25,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold),
-                        textAlign: TextAlign.right,
-                      ),
-                    )
-                  ],
-                ),
-              ),
+              MoneyBox("ยอดคองเหลือ", 10000,
+                  const Color.fromARGB(255, 182, 249, 184), 120),
               SizedBox(
                 height: 5,
               ),
-              Container(
-                padding: const EdgeInsets.all(20.0),
-                decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 109, 255, 99),
-                    borderRadius: BorderRadius.circular(10)),
-                height: 100,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      "รายรับ",
-                      style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Expanded(
-                      child: Text("25000",
-                          style: TextStyle(
-                              fontSize: 25,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.right),
-                    )
-                  ],
-                ),
-              ),
+              MoneyBox(
+                  "รายรับ", 15000.50, Color.fromARGB(255, 95, 236, 255), 120),
               SizedBox(
                 height: 5,
               ),
-              Container(
-                padding: const EdgeInsets.all(20.0),
-                decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 255, 156, 51),
-                    borderRadius: BorderRadius.circular(10)),
-                height: 100,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      "เงินค้างชำระ",
-                      style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Expanded(
-                      child: Text("1200",
-                          style: TextStyle(
-                              fontSize: 25,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.right),
-                    )
-                  ],
-                ),
-              )
+              MoneyBox("รายจ่าย", 5000, Color.fromRGBO(255, 111, 183, 1), 120),
             ],
           ),
         ));

@@ -40,32 +40,16 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("program!!!"),
-      ),
-      body: Center(
-        child: ListView(
-          children: getData(number),
+        appBar: AppBar(
+          title: Text("program!!!"),
         ),
-      ),
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          FloatingActionButton(
-            onPressed: addNumber,
-            child: Icon(Icons.add),
-          ),
-          SizedBox(
-            height: 16,
-            width: 16,
-          ), // Add some spacing between the buttons
-          FloatingActionButton(
-            onPressed: minusNumber,
-            child: Icon(Icons.exposure_minus_1),
-          ),
-        ],
-      ),
-    );
+        body: ListView.builder(
+            itemCount: 50,
+            itemBuilder: (BuildContext context, int index) {
+              return ListTile(
+                title: Text("เมนูที่ ${index + 1}"),
+              );
+            }));
   }
 
   void addNumber() {

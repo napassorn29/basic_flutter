@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: ListView(
-          children: getData(15),
+          children: getData(30),
         ),
       ),
       floatingActionButton: Row(
@@ -85,7 +85,10 @@ class _MyHomePageState extends State<MyHomePage> {
 // กลุ่มข้อมูล text widget เก็บไว้ในตัวแปรชื่อ data
     List<Widget> data = [];
     for (var i = 0; i < count; i++) {
-      data.add(Text("รายการที่ ${i + 1}"));
+      data.add(Text(
+        "รายการที่ ${i + 1}",
+        style: TextStyle(fontSize: 20, color: Colors.blueGrey),
+      ));
     }
     data.add(
       Text(

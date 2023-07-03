@@ -57,11 +57,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [Text("คงเหลือ"), Text("15000")],
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+              ),
               Container(
                 decoration: BoxDecoration(
                     color: const Color.fromARGB(255, 142, 179, 100),
                     borderRadius: BorderRadius.circular(10)),
                 height: 100,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
               ),
               Container(
                 decoration: BoxDecoration(

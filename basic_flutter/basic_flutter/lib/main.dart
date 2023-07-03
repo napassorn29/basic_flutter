@@ -85,9 +85,12 @@ class _MyHomePageState extends State<MyHomePage> {
 // กลุ่มข้อมูล text widget เก็บไว้ในตัวแปรชื่อ data
     List<Widget> data = [];
     for (var i = 0; i < count; i++) {
-      var menu = Text(
-        "รายการที่ ${i + 1}",
-        style: TextStyle(fontSize: 20, color: Colors.blueGrey),
+      var menu = ListTile(
+        title: Text(
+          "เมนูที่ ${i + 1}",
+          style: TextStyle(fontSize: 20),
+        ),
+        subtitle: Text("หัวข้อย่อยที่ ${i + 1}"),
       );
       data.add(menu);
     }

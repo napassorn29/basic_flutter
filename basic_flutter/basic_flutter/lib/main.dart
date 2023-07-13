@@ -35,9 +35,19 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  // แสดงผลข้อมูล
+  int number = 0;
+
+  // initstate
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    print("เรียกใช้งาน init state");
+  }
+
   @override
   Widget build(BuildContext context) {
+    print("เรียกใช้งาน build");
     return Scaffold(
         appBar: AppBar(
           title: Text(
@@ -48,23 +58,21 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              MoneyBox("ยอดคองเหลือ", 10000,
-                  const Color.fromARGB(255, 182, 249, 184), 120),
-              SizedBox(
-                height: 5,
-              ),
-              MoneyBox(
-                  "รายรับ", 15000.50, Color.fromARGB(255, 95, 236, 255), 120),
-              SizedBox(
-                height: 5,
-              ),
-              MoneyBox("รายจ่าย", 5000, Color.fromRGBO(255, 111, 183, 1), 120),
-            ],
-          ),
+        body: Column(
+          children: [
+            Text(
+              number.toString(),
+              style: TextStyle(fontSize: 30),
+            )
+          ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            setState(() {
+              number++;
+            });
+          },
+          child: Icon(Icons.add),
         ));
   }
 }
